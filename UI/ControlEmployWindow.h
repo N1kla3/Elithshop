@@ -10,7 +10,14 @@
 class ControlEmployWindow
 {
 public:
-
+    void showEmpControlWindow();
+    void showAddEmpWindow();
+    void showDelEmpWindow();
+    void showSendEmpToHolidayWindow();
+    void showEditEmpWindow();
+    void addEmployee();
+    void delEmployee();
+    void editEmployee();
 private:
 
 };

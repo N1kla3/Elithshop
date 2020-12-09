@@ -7,10 +7,12 @@
 #define SHOP_EMPLOYEESWINDOW_H
 
 
+#include <string>
+
 class EmployeesWindow
 {
 public:
-
+    void buttonPressed(std::string name);
 };
 
 

@@ -9,7 +9,8 @@
 
 class ProductWindow
 {
-
+public:
+    void pressButton(std::string);
 };
 
 

@@ -7,10 +7,12 @@
 #define SHOP_CONTROLPRODUCTWINDOW_H
 
 
+#include <string>
+
 class ControlProductWindow
 {
 public:
-
+    void pressedButton(std::string);
 private:
 };
 
