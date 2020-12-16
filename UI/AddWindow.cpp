@@ -43,4 +43,6 @@ AddWindow::AddWindow(IShop *shop, QWidget *parent) :
     layout->addWidget(check_manager);
     layout->addWidget(check_emp);
     layout->addWidget(add_button);
+
+    setLayout(layout);
 }
