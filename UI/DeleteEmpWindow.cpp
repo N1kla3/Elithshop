@@ -8,7 +8,8 @@
 #include <QPushButton>
 #include <QCheckBox>
 
-DeleteEmpWindow::DeleteEmpWindow(IShop *shop, QWidget *parent)
+DeleteEmpWindow::DeleteEmpWindow(IShop *shop, QWidget *parent) :
+    QWidget(parent)
 {
     auto layout = new QVBoxLayout(this);
 
