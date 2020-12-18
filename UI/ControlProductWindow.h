@@ -8,12 +8,32 @@
 
 
 #include <string>
+#include <QPushButton>
+#include <QVBoxLayout>
+#include "../Commands/ICommand.h"
+#include "../IShop.h"
 
-class ControlProductWindow
+class ControlProductWindow : public QWidget
 {
 public:
-    void pressedButton(std::string);
+    ControlProductWindow(IShop* shop, QWidget* parent = nullptr) :
+        QWidget(parent),
+        m_Shop(shop)
+    {
+        auto layout = new QVBoxLayout(this);
+        for (auto commanda : commands)
+        {
+            auto button = new QPushButton(this);
+            layout->addWidget(button);
+        }
+    }
+    void AddCommand(ICommand* command)
+    {
+        commands.push_back(command);
+    }
 private:
+    IShop* m_Shop;
+    std::vector<ICommand*> commands{};
 };
 
 

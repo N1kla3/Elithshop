@@ -10,7 +10,7 @@
 #include "../UI/ShowEmpInfoWindow.h"
 #include "../IShop.h"
 
-class ShowEmpInfoCommand
+class ShowEmpInfoCommand : public ICommand
 {
 public:
     ShowEmpInfoCommand(IShop* shop);

@@ -3,6 +3,7 @@
 //
 
 #include "IProductControlServiceImpl.h"
+#include "Producer.h"
 
 std::vector<Product> IProductControlServiceImpl::getProductsFromStorage()
 {

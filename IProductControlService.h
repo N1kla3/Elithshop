@@ -9,6 +9,7 @@
 
 #include <vector>
 #include "Product.h"
+#include "Producer.h"
 
 class IProductControlService
 {

@@ -6,6 +6,11 @@
 #ifndef SHOP_MAINWINDOW_H
 #define SHOP_MAINWINDOW_H
 
+#include <QStackedWidget>
+#include <QWidget>
+#include <QMainWindow>
+#include "AuthWindow.h"
+
 class ControlEmployWindow;
 class ControlProductWindow;
 class EmployeesWindow;
@@ -13,17 +18,24 @@ class ProductsAmountWindow;
 class ProductWindow;
 class IShop;
 
-class MainWindow
+class MainWindow : public QMainWindow
 {
+    Q_OBJECT
 public:
+    explicit MainWindow(IShop* shop, QWidget *parent = nullptr);
     void showLogin();
-    void showMainWindow();
+    void showMainWindow( );
+    void setEmployControl( ControlEmployWindow* employ_control_window);
+    void setProductControl(ControlProductWindow* product_control_window);
+    void setProductAmount(ProductsAmountWindow* product_amount );
+    void setAuth(AuthWindow* auth );
 
+    QStackedWidget* m_Widget;
+    QWidget* m_MainWidget;
     ControlEmployWindow* employ_control_window = nullptr;
     ControlProductWindow* product_control_window = nullptr;
-    EmployeesWindow* employees_window = nullptr;
     ProductsAmountWindow* product_amount = nullptr;
-    ProductWindow* product_window = nullptr;
+    AuthWindow* auth = nullptr;
     IShop* shop = nullptr;
 };
 

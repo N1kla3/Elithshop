@@ -7,6 +7,7 @@
 #define SHOP_IPRODUCTCONTROLSERVICEIMPL_H
 
 #include "IProductControlService.h"
+#include "Producer.h"
 
 class IProductControlServiceImpl : public IProductControlService
 {
@@ -24,6 +25,10 @@ public:
     void acceptFromProducer(Product product, int i, Producer producer) override;
     void sellProduct(Product product, int i) override;
     std::vector<Product> listExpiredProducts() override;
+
+
+    std::vector<Product>  shop_room;
+    std::vector<Product>  storage;
 };
 
 

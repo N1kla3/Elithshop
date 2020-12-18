@@ -20,11 +20,7 @@ public:
     virtual void startWork() = 0;
     virtual void exit() = 0;
 
-    IAuth* auth = nullptr;
-    std::vector<Employee*> employees{};
-    Employee* current_emp = nullptr;
-    IEmployControlService* employ_service = nullptr;
-    IProductControlService* product_service = nullptr;
+
 };
 
 

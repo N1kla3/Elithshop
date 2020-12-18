@@ -7,6 +7,7 @@
 #define SHOP_IEMPLOYCONTROLSERVICEIMPL_H
 
 #include "IEmployControlService.h"
+#include "Product.h"
 
 class IEmployControlServiceImpl : public IEmployControlService
 {
@@ -19,6 +20,8 @@ public:
     virtual std::vector<Employee> watchEmployees() override;
     virtual void giveSalaryToEmp(const Employee &employee) override;
 
+
+    std::vector<Employee*> emps;
 };
 
 
