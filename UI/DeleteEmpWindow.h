@@ -13,7 +13,7 @@ class DeleteEmpWindow : public QWidget
 {
     Q_OBJECT
 public:
-    DeleteEmpWindow(IShop* shop, QWidget* parent);
+    DeleteEmpWindow(IShop* shop, QWidget* parent = nullptr);
 
 private:
     IShop* m_shop;

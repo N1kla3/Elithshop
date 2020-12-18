@@ -9,7 +9,8 @@
 #include <QCheckBox>
 
 DeleteEmpWindow::DeleteEmpWindow(IShop *shop, QWidget *parent) :
-    QWidget(parent)
+    QWidget(parent),
+    m_shop(shop)
 {
     auto layout = new QVBoxLayout(this);
 
