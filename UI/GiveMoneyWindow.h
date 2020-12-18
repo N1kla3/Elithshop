@@ -13,7 +13,7 @@ class GiveMoneyWindow : public QWidget
 {
 Q_OBJECT
 public:
-    GiveMoneyWindow(IShop* shop, QWidget* parent);
+    GiveMoneyWindow(IShop* shop, QWidget* parent = nullptr);
 
 private:
     IShop* m_shop;
